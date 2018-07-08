@@ -1,0 +1,21 @@
+version: '3'
+services:
+  mysql:
+    image: "mysql:5.7"
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_DATABASE=mirawatt_wordpress
+      - MYSQL_USER=mirawatt.co_user
+      - MYSQL_PASSWORD=hu73cF
+    ports:
+     - "3306:3306"
+    volumes:
+      - "./:/backup"
+
+  wordpress:
+    build: ./
+    links:
+      - mysql
+    ports:
+      - "80:80"
+
