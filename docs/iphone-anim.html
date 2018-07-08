@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Mirawatt</title>
+        <link rel="stylesheet" href="mirawatt-wp-style.css" type="text/css" media="screen">
+        <style type="text/css" media="screen">
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="header">
+                <div id="logo">
+                    <a href="/">
+                        <img style="margin-top: -15px;" src="mirawatt-wp-pixel-logo-400x75-trans.png">
+                    </a>
+                </div>
+                <div class="cleared"></div>
+            </div> <!-- Closes header -->
+
+            <div id="catnav">
+                <div id="toprss"></div> <!-- Closes toprss -->
+                <ul id="nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/iphone-web">iPhone Web</a></li>
+                    <li><a href="/iphone-anim">Animated</a></li>
+                    <li><a href="/currentcost">CurrentCost</a></li>
+                    <li><a href="/facebook">FaceBook</a></li>
+                    <li><a href="/ted.html">TED</a></li>
+                </ul>
+            </div> <!-- Closes catnav -->
+
+            <div class="cleared"></div>
+
+            <div id="main">
+                <div id="contentwrapper">
+                    <div class="topPost">
+                        <h2 class="topTitle"><a href="/">iPhone Animated View</a></h2>
+
+                        <div class="topContent">
+
+                            <p>This is how the application looks on the iPhone.</p>
+                            <p>Hover inside grey box to rotate <i>(only on Chrome)</i></p>
+                            <style type="text/css"> 
+                            #outertransform { 
+                              -webkit-transition: all .75s ease-in-out; 
+                            }
+                            #frametransform { 
+                              -webkit-transition: all 1.5s ease-in-out; 
+                            }
+                            #outeroffset {
+                             padding-left:0px;
+                             width:740px;
+                             border:1px solid grey;
+                            }
+                            #outeroffset:hover #outertransform {
+                              -webkit-transform: rotate(-90deg) translate(320px,0px); 
+                            }
+                            #wrapperbg {
+                              width:408px; height:740px; 
+                              background-image: url('http://imetrical.appspot.com/s/i/mirawattIPhone-bg-for-320x460.png'); 
+                              background-repeat:none; 
+                              background-position:0 0; 
+                              padding:0px; margin:0px; 
+                            }
+                            #inneroffset {
+                              padding-left:45px;padding-top:157px;
+                            }
+                            #overflowwrapper {
+                              width:320px; height:460px; overflow:hidden;
+                            }
+                            #outeroffset:hover #frametransform {
+                              -webkit-transform: rotate(90deg) scale(1.5) translate(0px,138px); 
+                            }
+                            </style>
+                            <div id="outeroffset" >
+                            <div id="outertransform">
+                            <div id="wrapperbg" >
+                            <div id="inneroffset" >
+                            <div id="overflowwrapper" >
+                            <div id="frametransform" >
+                            <iframe src ="http://imetrical.appspot.com/s/i/iphone-cache.html" width="320px"  height="560px" frameborder="0" scrolling="no" allowTransparency="true">
+                                            <p>Your browser does not support iframes.</p>
+                            </iframe>	
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                                                        
+                        </div> <!-- close topContent -->
+
+                        <div class="cleared"></div>
+                    </div> <!-- Closes topPost -->
+                </div> <!-- Closes contentwrapper-->
+            </div><!-- Closes Main -->
+        </div><!-- Closes wrapper -->
+
+    </body>
+</html>

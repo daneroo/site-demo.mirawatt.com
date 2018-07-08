@@ -3,11 +3,15 @@ On 2018-07-05 I migrated all the data on axial servers
 which histed multiple sites. One of the sites (demo.mirawatt.com) also had a database, being a wordpress site.
 
 ## TODO
+
 - [Publish from master/docs](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/)
 - [Simply Static (export)](https://wordpress.org/plugins/simply-static/)
 - [Static Html Ouput](https://wordpress.org/plugins/static-html-output-plugin/)
 - [WP to hugo](https://github.com/SchumacherFM/wordpress-to-hugo-exporter)
 - iMetrical: <img src="https://latex.codecogs.com/svg.latex?%5Clarge%20%5Cparallel%7Bi%7D%5Cparallel" title="\parallel{i}\parallel" />
+- Older version control: git@github.com:daneroo/snookr-gcode.git 
+  - /green/ CC128Sim/ Energate iMetricalFB|GAE iMetricalWeb mirawatt/iphone weightricalWeb
+
 
 ## iMetrical Latex logo
 https://www.mathjax.org/#demo
@@ -36,7 +40,16 @@ Copied `info.php` to `mirawatt.cld-linux01.axialdev.net:/httpdocs/demo`
   - http://demo.mirawatt.com/info.php
   - full output saved here: './phpinfo-capture-2018-07-05.html`
 
-## Running locally
+## Export by hand
+Since I only have a few pages, start with ted.mirawatt.com (in `./docs`), and move content manually
+- check legacy pages
+  - demo.html - wants to talk to TED5K
+  - iphone-ted-text.html - wants to talk to TED5k
+  - iphone-ted.html - wants to talk to TED5k
+
+## Running locally (docker) for migration
+first `cd legacy`.
+
 ```
 # create database
 docker-compose build
@@ -48,18 +61,16 @@ docker-compose exec mysql bash -c "mysql mirawatt_wordpress </backup/mirawatt_wo
 open http://localhost/wp-admin/
 ```
 
-## Export by hand
-Since I only have a few pages, start with ted.mirawatt.com (in `./docs`), and move content manually
 
-## Static export
+### Static export
 Could not make this work
-### Static export with static-html-output-plugin.4.0
+#### Static export with static-html-output-plugin.4.0
 Neede to tell it where the new site will be hosted (http://demo.mirawatt.com).
 -index.html: <img style="margin-top:-15px" src="contents/ui/theme/images/mirawatt-wp-pixel-logo-400x75-trans.png" >
-### Static export with simply-static.2.1.0
+#### Static export with simply-static.2.1.0
 Causes an error on export: can't find error
 
-## Converting to hugo:
+#### Converting to hugo:
 ```
 docker-compose exec wordpress bash
 
