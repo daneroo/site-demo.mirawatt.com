@@ -2,12 +2,18 @@
 On 2018-07-05 I migrated all the data on axial servers
 which histed multiple sites. One of the sites (demo.mirawatt.com) also had a database, being a wordpress site.
 
+Site is now hosted on github pages: [demo.mirawatt.com](http://demo.mirawatt.com/), and published from `master` branch `docs/` folder
+
+Using A records on mirawatt.com:
+```
+A demo 185.199.108.153
+A demo 185.199.109.153
+A demo 185.199.110.153
+A demo 185.199.111.153
+```
+
 ## TODO
 
-- [Publish from master/docs](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/)
-- [Simply Static (export)](https://wordpress.org/plugins/simply-static/)
-- [Static Html Ouput](https://wordpress.org/plugins/static-html-output-plugin/)
-- [WP to hugo](https://github.com/SchumacherFM/wordpress-to-hugo-exporter)
 - iMetrical: <img src="https://latex.codecogs.com/svg.latex?%5Clarge%20%5Cparallel%7Bi%7D%5Cparallel" title="\parallel{i}\parallel" />
 - Older version control: git@github.com:daneroo/snookr-gcode.git 
   - /green/ CC128Sim/ Energate iMetricalFB|GAE iMetricalWeb mirawatt/iphone weightricalWeb
