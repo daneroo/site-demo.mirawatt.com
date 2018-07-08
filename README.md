@@ -1,6 +1,6 @@
 # Migration of demo.mirawatt.com from Axial servers
 On 2018-07-05 I migrated all the data on axial servers
-which histed multiple sites. One of the sites (demo.mirawatt.com) also had a database, being a wordpress site.
+which hosted multiple sites. One of the sites (demo.mirawatt.com) also had a database, being a wordpress site.
 
 Site is now hosted on github pages: [demo.mirawatt.com](http://demo.mirawatt.com/), and published from `master` branch `docs/` folder. Also Published to: [http://daniel-lauzon.com/site-demo.mirawatt.com/](http://daniel-lauzon.com/site-demo.mirawatt.com/) but root relative links are broken
 
