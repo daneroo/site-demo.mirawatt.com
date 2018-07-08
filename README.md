@@ -2,14 +2,23 @@
 On 2018-07-05 I migrated all the data on axial servers
 which histed multiple sites. One of the sites (demo.mirawatt.com) also had a database, being a wordpress site.
 
-Site is now hosted on github pages: [demo.mirawatt.com](http://demo.mirawatt.com/), and published from `master` branch `docs/` folder
+Site is now hosted on github pages: [demo.mirawatt.com](http://demo.mirawatt.com/), and published from `master` branch `docs/` folder. Also Published to: [http://daniel-lauzon.com/site-demo.mirawatt.com/](http://daniel-lauzon.com/site-demo.mirawatt.com/) but root relative links are broken
 
-Using A records on mirawatt.com:
+
+Using CNAME record on mirawatt.com:
 ```
-A demo 185.199.108.153
-A demo 185.199.109.153
-A demo 185.199.110.153
-A demo 185.199.111.153
+CNAME demo daneroo.github.io
+
+$ dig demo.mirawatt.com
+
+;; ANSWER SECTION:
+demo.mirawatt.com.	899	IN	CNAME	daneroo.github.io.
+daneroo.github.io.	3599	IN	CNAME	sni.github.map.fastly.net.
+sni.github.map.fastly.net. 3599	IN	A	185.199.108.153
+sni.github.map.fastly.net. 3599	IN	A	185.199.109.153
+sni.github.map.fastly.net. 3599	IN	A	185.199.110.153
+sni.github.map.fastly.net. 3599	IN	A	185.199.111.153
+
 ```
 
 ## TODO
